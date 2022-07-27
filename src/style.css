@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+}
+
+
+body {
+    background-color: rgb(26, 1, 1);
+    color: antiquewhite;
+    overflow-x: hidden;
+    font-size: 50px;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    gap: 5rem;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.weather-card {
+    border: 10px solid rgb(238, 222, 200);
+    width: 90vw;
+    /* height: 80vh; */
+    overflow: hidden;
+    padding: 2rem;
+    cursor: default;
+    background-color: rgb(20, 17, 17);
+    box-shadow: 10px 10px 0 rgba(105, 44, 44, 0.5);
+}
+
+.intro-text {
+    flex-direction: column;
+}
+
+.loader {
+    width: 150px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: #25b09b;
+    animation: spin 1s infinite linear;
+}
+
+.loader::before, 
+.loader::after {
+    content: '';
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: spin 2s infinite;
+}
+
+.loader::after {
+    margin: 8px;
+    animation-duration: 3s;
+}
+
+@keyframes spin {
+    100% {transform: rotate(1turn)}
+}
+
+.weather-data {
+    visibility: hidden;
+    flex-direction: column;
+}
+
+.london-data {
+    flex-direction: row;
+}
+.giph {
+    width: 60vw;
+    max-height: 50vh;
+}
+
+form {
+    gap: 1rem;
+}
+
+.form-btn,
+.random-btn {
+    width: 18vw;
+    height: 8vh;
+    outline: none;
+    border: none;
+    background-color: brown;
+    color: black;
+    font-size: 25px;
+}
+
+.form-btn:hover,
+.random-btn:hover {
+    color: brown;
+    background-color: black;
+    border: brown solid 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-input {
+    width: 40vw;
+    height: 10vh;
+    font-size: 40px;
+    outline: none;
+    border: none;
+    background-color: black;
+    border: 10px solid antiquewhite;
+    color: antiquewhite;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+    background-color: #181717;
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px var(--header-color);
+    border-radius: 1rem;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    box-shadow: inset 0 0 6px var(--red);
+}
+
+@media (min-width: 1000px) {
+    body {
+        overflow: hidden;
+        font-size: 60px;
+    }
+
+    .container {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .weather-card {
+        width: 40vw;
+    }
+
+    .user-input {
+        width: 15vw;
+    }
+
+    
+.form-btn,
+.random-btn {
+    width: 10vw;
+}
+
+    .giph {
+        width: 30vw;
+    }
+}

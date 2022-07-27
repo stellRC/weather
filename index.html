@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Practice</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./dist/main.js" defer></script>
+</head>
+<body>
+    <section class="container flex">
+        <form action="" class="flex">
+            <input class="user-input" type="text">
+            <button class="form-btn" type="submit">Get Weather</button>
+        </form>
+        <button class="random-btn">Random</button>
+        <section class="weather-card">
+            <div class="intro-text flex">
+                <h2>Today's Destination is...</h2>
+                <div class="loader"></div>
+            </div>
+            <section class="weather-data flex">
+                <div class="location-data flex">
+                    <span class="location"></span>
+                    <span class="location-country"></span>
+                </div>
+                <div class="weather-pattern-container flex">
+                    <span class="weather-pattern"></span>
+                    <img class="icon" src="#" alt="weather icon">
+                    <span class="temp-current" unit="celsius"></span>
+                </div>
+                <div class="temperature-container">
+                    <div class="pollution-data"></div>
+                </div>
+                <img class="giph" src="#" alt="weather giph">
+            </section>
+        </section>
+    </section>
+</body>
+</html>
+
